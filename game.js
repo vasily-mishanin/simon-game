@@ -4,7 +4,7 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-$(document).on('keydown' || 'click touch', (function () {
+$(document).on("keydown touchstart", function () {
   if (!started) {
     setTimeout(() => {
       nextSequence();
@@ -12,7 +12,7 @@ $(document).on('keydown' || 'click touch', (function () {
     $("#level-title").text("Lets go!");
     started = true;
   }
-}));
+});
 
 $(".btn").click(function () {
   let userChosenColour = $(this).attr("id");
