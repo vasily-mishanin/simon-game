@@ -4,7 +4,7 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-$(document).keypress(function () {
+$(document).on(isMobile ? 'touched' : 'keydown', (function () {
   if (!started) {
     setTimeout(() => {
       nextSequence();
@@ -12,7 +12,7 @@ $(document).keypress(function () {
     $("#level-title").text("Lets go!");
     started = true;
   }
-});
+}));
 
 $(".btn").click(function () {
   let userChosenColour = $(this).attr("id");
