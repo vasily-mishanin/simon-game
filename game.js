@@ -4,7 +4,7 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-$(document).keypress(function() {
+$(document).keypress(function () {
   if (!started) {
     setTimeout(() => {
       nextSequence();
@@ -14,7 +14,7 @@ $(document).keypress(function() {
   }
 });
 
-$(".btn").click(function() {
+$(".btn").click(function () {
   let userChosenColour = $(this).attr("id");
   playSound(userChosenColour);
   animatePress(userChosenColour);
@@ -52,7 +52,7 @@ function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     console.log("right");
     if (userClickedPattern.length === gamePattern.length) {
-      setTimeout(function() {
+      setTimeout(function () {
         nextSequence();
       }, 1000);
     }

@@ -6,15 +6,14 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
+  line-height: 1.5;
   margin: 5%;
   color: #FEF2BF;
 }
 
 .container {
   display: block;
-  width: 50%;
-  margin: auto;
-
+  width: 100%;
 }
 
 .btn {
@@ -25,6 +24,30 @@ body {
   border: 10px solid black;
   border-radius: 20%;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    margin-top: 150px;
+  }
+
+  .btn {
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .btn {
+    margin: 15px;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+
 
 .game-over {
   background-color: red;
