@@ -4,7 +4,7 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-$(document).on(isMobile ? 'touched' : 'keydown', (function () {
+$(document).on('keydown' || 'click touch', (function () {
   if (!started) {
     setTimeout(() => {
       nextSequence();
