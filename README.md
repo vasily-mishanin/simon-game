@@ -1,2 +1,3 @@
 # simon-game
-Site is published at https://vasily-mishanin.github.io/simon-game/
+# try it here  
+https://vasily-mishanin.github.io/simon-game/
