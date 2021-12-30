@@ -7,8 +7,11 @@ let level = 0;
 $(document).on("keydown touchstart", function () {
   if (!started) {
     setTimeout(() => {
+      $(".hint").addClass("hidden");
+    }, 1000)
+    setTimeout(() => {
       nextSequence();
-    }, 1000);
+    }, 2000);
     $("#level-title").text("Lets go!");
     started = true;
   }
@@ -25,14 +28,13 @@ $(".btn").click(function () {
 function nextSequence() {
   userClickedPattern = [];
   level++;
-  $("#level-title").text("Level " + level);
+  $("#level-title").text(`Level ${level}`);
   let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColour = buttonColours[randomNumber];
   $("#" + randomChosenColour)
     .fadeToggle(50)
     .fadeToggle(50);
-  let sound = new Audio("sounds/" + randomChosenColour + ".mp3");
-  sound.play();
+    playSound(randomChosenColour);
   gamePattern.push(randomChosenColour);
 }
 
@@ -57,13 +59,13 @@ function checkAnswer(currentLevel) {
       }, 1000);
     }
   } else {
-    let gameOverSound = new Audio("sounds/wrong.mp3");
-    gameOverSound.play();
+    playSound("wrong");
     $("body").addClass("game-over");
     setTimeout(() => {
       $("body").removeClass("game-over");
-    }, 200);
+    }, 300);
     $("#level-title").text("Game Over! Press Any Key to Restart!");
+    $(".hint").removeClass("hidden")
     startOver();
     console.log("wrong");
   }
