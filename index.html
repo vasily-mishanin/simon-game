@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Game</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <body>
+    <div class="main-container">
+      <div class="buttons-container">
+        <h1 id="level-title">Press Any Key to Start</h1>
+        <p class="hint">
+          You should click on the buttons according to order the game shows and
+          indicates to you.
+        </p>
 
-</head>
+        <div lass="row">
+          <div type="button" id="green" class="btn green"></div>
 
-<body>
-  <div class="main-container">
-
-
-    
-    
-    <div class="buttons-container">
-      <h1 id="level-title">Press Any Key to Start</h1>
-      <p class = "hint"> You should click on the buttons according to order the game shows and indicates to you.</p>
-
-      <div lass="row">
-
-        <div type="button" id="green" class="btn green">
-
+          <div type="button" id="red" class="btn red"></div>
         </div>
 
-        <div type="button" id="red" class="btn red">
-
+        <div class="row">
+          <div type="button" id="yellow" class="btn yellow"></div>
+          <div type="button" id="blue" class="btn blue"></div>
         </div>
       </div>
 
-      <div class="row">
-
-        <div type="button" id="yellow" class="btn yellow">
-
-        </div>
-        <div type="button" id="blue" class="btn blue">
-
-        </div>
-
+      <div class="footer">
+        <p>
+          With help from
+          <a
+            href="https://www.udemy.com/user/4b4368a3-b5c8-4529-aa65-2056ec31f37e/"
+            >Angela Yu</a
+          >
+        </p>
       </div>
-
     </div>
 
-
-    <div class='footer'>
-      <p>With help from <a href="https://www.udemy.com/user/4b4368a3-b5c8-4529-aa65-2056ec31f37e/">Angela
-          Yu</a>
-      </p>
-    </div>
-
-  </div>
-
-
-  <script src="game.js"></script>
-</body>
-
+    <script src="game.js"></script>
+  </body>
 </html>
